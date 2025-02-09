@@ -1,0 +1,32 @@
+{
+  "login": "تسجيل الدخول",
+  "login_successful": "تم تسجيل الدخول بنجاح! الرمز: {0}",
+  "login_failed": "فشل تسجيل الدخول! الخطأ: {0}",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "submit": "إرسال",
+  "home": "الرئيسية",
+  "tasks": "التقارير اليومية",
+  "surveys": "الاستبيانات",
+  "menu": "القائمة",
+  "changeLanguage": " تغيير اللغة",
+  "cancel": "إلغاء",
+  "change": "تغيير",
+  "signOut": "تسجيل الخروج",
+  "privacyPolicy": "سياسة الخصوصية",
+  "termsOfUse": "شروط الاستخدام",
+  "workers": "فريق العمل",
+  "technicalSupport": "الدعم الفني",
+  "profile": "المعلومات الشخصية",
+  "attendanceRegistration": "المعلومات الشخصية",
+  "register": "تسجيل",
+  "registerNow": "تسجيل حضورك الآن!",
+  "checkingLocation": "ابدأ يومك بالتحقق من الموقع",
+  "tasksAssignedToYou": "المهام الموكلة لك",
+  "dateOfTask": "تاريخ المهمة",
+  "missionLocation": "موقع المهمة",
+  "questionnaires": "الاستبانات"
+
+
+
+}

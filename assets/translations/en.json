@@ -1,0 +1,35 @@
+{
+  "login": "Login",
+  "login_successful": "Login successful! Token: {0}",
+  "login_failed": "Login failed! Error: {0}",
+  "email": "Email",
+  "password": "Password",
+  "submit": "Submit",
+  "home": "Home",
+  "tasks": "Tasks",
+  "surveys": "Surveys",
+  "menu": "Menu",
+  "changeLanguage": "Change language",
+  "cancel": "Cancel",
+  "change": "Change",
+  "signOut": "Sign Out",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfUse": "Terms Of Use ",
+  "workers": "Workers groups",
+  "technicalSupport": "Technical Support",
+  "profile": "Profile",
+  "attendanceRegistration": "Attendance Registration",
+  "register": "Register",
+  "registerNow": "Register now!",
+  "checkingLocation": "Start your day by checking the location",
+  "tasksAssignedToYou": "Tasks assigned to you",
+  "dateOfTask": "Date of Task",
+  "missionLocation": "Mission location",
+  "questionnaires": "Questionnaires"
+
+
+
+
+
+
+}
