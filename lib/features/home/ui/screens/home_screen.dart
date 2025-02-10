@@ -25,7 +25,7 @@ class HomePageScreen extends StatelessWidget {
         case 5:
           return 'الخميس';
         default:
-          return '';
+          return 'الاجازه';
       }
     }
 

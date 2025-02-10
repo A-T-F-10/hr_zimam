@@ -36,7 +36,7 @@ class ButtonsGridMenu extends StatelessWidget {
                 icon: Icons.calendar_today_outlined,
                 label: 'طلب إجازة',
                 onTap: () {
-                  print('object2');
+                  context.pushNamed(Routes.leaveRequestFormScreen);
                 }),
             _buildGridItem(
                 icon: Icons.description_outlined,
@@ -48,7 +48,7 @@ class ButtonsGridMenu extends StatelessWidget {
                 icon: Icons.attach_money_outlined,
                 label: 'الرواتب والبدلات',
                 onTap: () {
-                  print('object4');
+                  context.pushNamed(Routes.salaryScreen);
                 }),
             _buildGridItem(
                 icon: Icons.description_outlined,

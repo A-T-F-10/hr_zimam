@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:zimam_app_hr/core/helpers/extensions.dart';
+import 'package:zimam_app_hr/core/routing/routes.dart';
 import '../../../../core/helpers/spacing.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
@@ -42,7 +44,7 @@ PreferredSizeWidget customMainAppBar({required BuildContext context}) {
                       AppWidgetButton(
                         widget: Badge(
                           label: Text(
-                            '2',
+                            '1',
                             style: TextStyles.font12WhiteBold,
                           ),
                           alignment: Alignment.topRight,
@@ -63,7 +65,9 @@ PreferredSizeWidget customMainAppBar({required BuildContext context}) {
                       horizontalSpace(10),
                       AppWidgetButton(
                         widget: chickImageNetwork(url: 'url'),
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pushNamed(Routes.settingScreen);
+                        },
                         borderRadius: 100,
                         backgroundColor: ColorsManager.raWhite,
                         buttonWidth: 40.w,
