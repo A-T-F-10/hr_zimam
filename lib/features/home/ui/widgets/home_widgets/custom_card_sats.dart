@@ -11,7 +11,7 @@ class CustomCardSats extends StatelessWidget {
   Widget build(BuildContext context) {
     return // Statistics Row
         Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
