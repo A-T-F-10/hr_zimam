@@ -21,13 +21,13 @@ chickImageNetwork({
         return child;
       } else {
         // Show a loading indicator while the image is being loaded
-        return Image.asset('assets/images/user_preview.png');
+        return Image.asset('assets/images/arabsstock.png');
       }
     },
     errorBuilder:
         (BuildContext context, Object exception, StackTrace? stackTrace) {
       // Handle the error when the image fails to load
-      return Image.asset('assets/images/user_preview.png');
+      return Image.asset('assets/images/arabsstock.png');
     },
   );
 }

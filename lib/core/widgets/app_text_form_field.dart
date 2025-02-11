@@ -14,9 +14,12 @@ class AppTextFormField extends StatelessWidget {
   final String hintText;
   final TextInputType? textInputType;
   final bool? isObscureText;
+  final bool? readOnly;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final Color? backgroundColor;
+  final TextDirection? hintTextDirection;
+
   final TextEditingController? controller;
   final Function(String?) validator;
   const AppTextFormField({
@@ -25,7 +28,9 @@ class AppTextFormField extends StatelessWidget {
     this.focusedBorder,
     this.enabledBorder,
     this.textInputType,
+    this.hintTextDirection,
     this.inputTextStyle,
+    this.readOnly,
     this.hintStyle,
     required this.hintText,
     this.isObscureText,
@@ -41,7 +46,9 @@ class AppTextFormField extends StatelessWidget {
     return TextFormField(
       keyboardType: textInputType,
       controller: controller,
+      readOnly: readOnly ?? false,
       decoration: InputDecoration(
+        hintTextDirection: hintTextDirection,
         isDense: true,
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),

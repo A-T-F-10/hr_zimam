@@ -7,6 +7,7 @@ import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theme/colors.dart';
 import '../../../../../core/theme/styles.dart';
 
+// ignore: must_be_immutable
 class TaskChecklistPage extends StatelessWidget {
   TaskChecklistPage(
       {Key? key,
