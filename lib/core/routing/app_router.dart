@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zimam_app_hr/features/home/ui/screens/home_screen.dart';
 import 'package:zimam_app_hr/features/home/ui/screens/organizational_structure.dart';
+import 'package:zimam_app_hr/features/home/ui/screens/regulations.dart';
+import 'package:zimam_app_hr/features/home/ui/screens/request_details.dart';
+import 'package:zimam_app_hr/features/home/ui/screens/request_page.dart';
 import '../../features/home/ui/screens/attendance_record.dart';
 import '../../features/home/ui/screens/leave_request.dart';
 import '../../features/home/ui/screens/salaries.dart';
@@ -86,6 +89,19 @@ class AppRouter {
           builder: (_) => LeaveRequestForm(),
         );
 
+      case Routes.regulations:
+        return MaterialPageRoute(
+          builder: (_) => RegulationsScreen(),
+        );
+
+      case Routes.requestsPage:
+        return MaterialPageRoute(
+          builder: (_) => RequestsPage(),
+        );
+      case Routes.requestsDerails:
+        return MaterialPageRoute(
+          builder: (_) => RequestDetails(),
+        );
       default:
         return MaterialPageRoute(builder: (_) {
           return Scaffold(
