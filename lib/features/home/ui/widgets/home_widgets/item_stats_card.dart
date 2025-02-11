@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/helpers/spacing.dart';
 
+// ignore: must_be_immutable
 class ItemStatsCard extends StatelessWidget {
   ItemStatsCard(
       {super.key,

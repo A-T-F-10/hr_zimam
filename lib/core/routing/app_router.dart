@@ -3,9 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zimam_app_hr/features/home/ui/screens/home_screen.dart';
 import 'package:zimam_app_hr/features/home/ui/screens/organizational_structure.dart';
 import '../../features/home/ui/screens/attendance_record.dart';
+import '../../features/home/ui/screens/leave_request.dart';
+import '../../features/home/ui/screens/salaries.dart';
 import '../../features/login/cubit/login_cubit.dart';
 import '../../features/login/ui/forget_password.dart';
 import '../../features/login/ui/login_screen.dart';
+import '../../features/settings/change_password.dart';
+import '../../features/settings/setting_screen.dart';
+import '../../features/settings/user_info.dart';
 import '../../features/splash/ui/splash_screen.dart';
 import '../di/dependency_injection.dart';
 import 'routes.dart';
@@ -46,6 +51,16 @@ class AppRouter {
           builder: (_) => HomePageScreen(),
         );
 
+      case Routes.settingScreen:
+        return MaterialPageRoute(
+          builder: (_) => SettingScreen(),
+        );
+
+      case Routes.personalInformationPage:
+        return MaterialPageRoute(
+          builder: (_) => PersonalInformationPage(),
+        );
+
       case Routes.organizationalStructurePage:
         return MaterialPageRoute(
           builder: (_) => OrganizationalStructurePage(),
@@ -54,6 +69,21 @@ class AppRouter {
       case Routes.attendanceRecordPage:
         return MaterialPageRoute(
           builder: (_) => AttendanceRecordPage(),
+        );
+
+      case Routes.changePassword:
+        return MaterialPageRoute(
+          builder: (_) => ChangePasswordPage(),
+        );
+
+      case Routes.salaryScreen:
+        return MaterialPageRoute(
+          builder: (_) => SalaryScreen(),
+        );
+
+      case Routes.leaveRequestFormScreen:
+        return MaterialPageRoute(
+          builder: (_) => LeaveRequestForm(),
         );
 
       default:

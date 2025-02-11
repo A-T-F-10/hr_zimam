@@ -203,6 +203,12 @@ class TextStyles {
     color: ColorsManager.raRed,
   );
 
+  static TextStyle font16RedRegular = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.raRed,
+  );
+
   static TextStyle font14GrayRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
