@@ -50,13 +50,13 @@ class SalaryScreen extends StatelessWidget {
                 ),
                 child: ListView(
                   children: [
-                    _buildInfoItem('الرقم الوظيفي', '#ZEMP-0006#'),
-                    _buildInfoItem('القسم', 'تكنولوجيا المعلومات'),
-                    _buildInfoItem('تاريخ التعيين', '2025-01-01'),
-                    _buildInfoItem('الراتب الاساسي', '0.00 ريال'),
-                    _buildInfoItem('بدل السكن', '0.00 ريال'),
-                    _buildInfoItem('بدل النقل', '0.00 ريال'),
-                    _buildInfoItem('إجمالي الراتب', '0.00 ريال'),
+                    buildInfoItem('الرقم الوظيفي', '#ZEMP-0006#'),
+                    buildInfoItem('القسم', 'تكنولوجيا المعلومات'),
+                    buildInfoItem('تاريخ التعيين', '2025-01-01'),
+                    buildInfoItem('الراتب الاساسي', '0.00 ريال'),
+                    buildInfoItem('بدل السكن', '0.00 ريال'),
+                    buildInfoItem('بدل النقل', '0.00 ريال'),
+                    buildInfoItem('إجمالي الراتب', '0.00 ريال'),
 
                     // Medical Insurance Status
                     const SizedBox(height: 16),
@@ -150,35 +150,35 @@ class SalaryScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _buildInfoItem(String label, String value) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            label,
-            style: TextStyles.font14DarkBlueMedium,
+Widget buildInfoItem(String label, String value) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 16),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: TextStyles.font14DarkBlueMedium,
+        ),
+        const SizedBox(height: 8),
+        Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: Colors.grey[100],
+            borderRadius: BorderRadius.circular(8),
           ),
-          const SizedBox(height: 8),
-          Container(
-            width: double.infinity,
-            padding: EdgeInsets.all(14),
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Text(
-              value,
-              style: TextStyle(
-                color: Colors.grey[600],
-                fontSize: 16,
-              ),
+          child: Text(
+            value,
+            style: TextStyle(
+              color: Colors.grey[600],
+              fontSize: 16,
             ),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
 }

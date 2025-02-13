@@ -49,7 +49,7 @@ class TeamMemberCard extends StatelessWidget {
                 ),
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: chickImageNetwork(url: 'url')),
+                    child: chickImageNetwork(url: '')),
               ),
               horizontalSpace(12),
               // Name and Phone

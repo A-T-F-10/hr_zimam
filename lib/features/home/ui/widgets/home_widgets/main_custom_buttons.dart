@@ -54,13 +54,13 @@ class ButtonsGridMenu extends StatelessWidget {
                 icon: Icons.description_outlined,
                 label: 'الطلبات',
                 onTap: () {
-                  print('object5');
+                  context.pushNamed(Routes.requestsPage);
                 }),
             _buildGridItem(
               icon: Icons.access_time_outlined,
               label: 'سجل الحضور والانصراف',
               onTap: () {
-                print('object6');
+                context.pushNamed(Routes.regulations);
               },
             ),
           ],
