@@ -51,7 +51,11 @@ class PersonalInformationPage extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: PreferredSize(
+<<<<<<< HEAD
             preferredSize: Size(0, 220.h),
+=======
+            preferredSize: Size(0, 250.h),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -65,7 +69,11 @@ class PersonalInformationPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+<<<<<<< HEAD
                   verticalSpace(35),
+=======
+                  verticalSpace(20),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                   Row(
                     children: [
                       Expanded(
@@ -106,7 +114,11 @@ class PersonalInformationPage extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
+<<<<<<< HEAD
                         child: chickImageNetwork(url: 'testing.com'),
+=======
+                        child: chickImageNetwork(url: ''),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                         height: 100.h,
                         width: 100.w,
                         decoration: BoxDecoration(
