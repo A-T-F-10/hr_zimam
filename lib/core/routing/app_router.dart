@@ -11,6 +11,7 @@ import '../../features/home/ui/screens/salaries.dart';
 import '../../features/login/cubit/login_cubit.dart';
 import '../../features/login/ui/forget_password.dart';
 import '../../features/login/ui/login_screen.dart';
+import '../../features/notifications/ui/notification.dart';
 import '../../features/settings/change_password.dart';
 import '../../features/settings/setting_screen.dart';
 import '../../features/settings/user_info.dart';
@@ -101,6 +102,11 @@ class AppRouter {
       case Routes.requestsDerails:
         return MaterialPageRoute(
           builder: (_) => RequestDetails(),
+        );
+
+      case Routes.notification:
+        return MaterialPageRoute(
+          builder: (_) => NotificationsScreen(),
         );
       default:
         return MaterialPageRoute(builder: (_) {
