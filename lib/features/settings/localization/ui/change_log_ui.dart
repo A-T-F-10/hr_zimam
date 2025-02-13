@@ -9,6 +9,8 @@ import 'widgets/buildLanguageOptions.dart';
 import 'widgets/custom_change_log_bottons.dart';
 
 class LanguageSelectionPage extends StatelessWidget {
+  const LanguageSelectionPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<LanguageCubit, LanguageState>(builder: (context, state) {

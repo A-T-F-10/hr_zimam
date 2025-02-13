@@ -51,7 +51,7 @@ class PersonalInformationPage extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: PreferredSize(
-            preferredSize: Size(0, 220.h),
+            preferredSize: Size(0, 250.h),
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -65,7 +65,7 @@ class PersonalInformationPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  verticalSpace(35),
+                  verticalSpace(20),
                   Row(
                     children: [
                       Expanded(
@@ -106,7 +106,7 @@ class PersonalInformationPage extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
-                        child: chickImageNetwork(url: 'testing.com'),
+                        child: chickImageNetwork(url: ''),
                         height: 100.h,
                         width: 100.w,
                         decoration: BoxDecoration(

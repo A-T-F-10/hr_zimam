@@ -48,7 +48,7 @@ class RequestDetails extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
               child: Container(
-                height: 450.h,
+                height: 480.h,
                 // padding: EdgeInsets.symmetric(horizontal: 30.w),
                 decoration: BoxDecoration(
                     color: ColorsManager.raWhite,
