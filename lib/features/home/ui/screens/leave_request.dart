@@ -4,10 +4,15 @@ import 'package:zimam_app_hr/core/helpers/custom_divider.dart';
 import 'package:zimam_app_hr/core/helpers/extensions.dart';
 import 'package:zimam_app_hr/core/helpers/spacing.dart';
 import 'package:zimam_app_hr/core/theme/colors.dart';
+<<<<<<< HEAD
+
+import '../../../../core/theme/styles.dart';
+=======
 import 'package:zimam_app_hr/features/home/ui/screens/salaries.dart';
 
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
 
 class LeaveRequestForm extends StatefulWidget {
   const LeaveRequestForm({super.key});
@@ -18,6 +23,19 @@ class LeaveRequestForm extends StatefulWidget {
 
 class _LeaveRequestFormState extends State<LeaveRequestForm> {
   String selectedLeaveType = 'occasion';
+<<<<<<< HEAD
+  final startDate = DateTime(2025, 1, 1);
+  final endDate = DateTime(2025, 2, 1);
+
+  final leaveTypes = [
+    {'id': 'sick', 'label': 'إجازة مرضية', 'days': '10 ايام'},
+    {'id': 'occasion', 'label': 'إجازة مناسبة', 'days': '10 ايام'},
+    {'id': 'review', 'label': 'إجازة مراجعات', 'days': '2 ايام'},
+    {'id': 'marriage', 'label': 'إجازة زواج', 'days': '4 ايام'},
+    {'id': 'maternity', 'label': 'إجازة وضع', 'days': '2 ايام'},
+    {'id': 'annual', 'label': 'إجازة سنوية', 'days': '5 ايام'},
+  ];
+=======
   final startDate = DateTime.now();
   final endDate = DateTime.now();
 
@@ -30,12 +48,49 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
     {'id': 'annual', 'label': 'سنوية', 'days': '21 ايام'},
   ];
   String? days;
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+<<<<<<< HEAD
+        backgroundColor: Colors.grey[100],
+        appBar: AppBar(
+          toolbarHeight: 70.h,
+          leading: Container(
+            alignment: Alignment.topCenter,
+            height: 10.h,
+            margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 15.h),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: IconButton(
+              alignment: Alignment.topCenter,
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                context.pop();
+              },
+              color: Colors.black,
+            ),
+          ),
+          backgroundColor: Colors.black,
+          title: Text(
+            'طلب إجازة',
+            style: TextStyles.font16WhiteSemiBold,
+          ),
+          centerTitle: true,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 200.h,
+=======
         backgroundColor: ColorsManager.raWhite,
         appBar: customAppBar(
           context: context,
@@ -48,6 +103,7 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
               Container(
                 height: 180.h,
                 padding: EdgeInsets.symmetric(horizontal: 10.w),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                 decoration: BoxDecoration(
                     color: ColorsManager.raLightGray2,
                     borderRadius: BorderRadius.circular(10)),
@@ -65,7 +121,10 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                       ),
                     ),
                     CustomDivider(),
+<<<<<<< HEAD
+=======
                     verticalSpace(5),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                     GridView.count(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -78,7 +137,10 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                         return ElevatedButton(
                           onPressed: () {
                             setState(() {
+<<<<<<< HEAD
+=======
                               days = type['days'];
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                               selectedLeaveType = type['id']!;
                             });
                           },
@@ -94,9 +156,13 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                           child: Text(
                             type['label']!,
                             textAlign: TextAlign.center,
+<<<<<<< HEAD
+                            style: const TextStyle(fontSize: 11),
+=======
                             style: const TextStyle(
                               fontSize: 10,
                             ),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                           ),
                         );
                       }).toList(),
@@ -105,6 +171,177 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                 ),
               ),
 
+<<<<<<< HEAD
+              verticalSpace(20),
+              // Main Form
+              Expanded(
+                child: Card(
+                  color: ColorsManager.raWhite,
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Leave Type Section
+                        const Text(
+                          'نوع الإجازة',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        GridView.count(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          crossAxisCount: 3,
+                          mainAxisSpacing: 8,
+                          crossAxisSpacing: 8,
+                          childAspectRatio: 2.5,
+                          children: leaveTypes.map((type) {
+                            final isSelected = type['id'] == selectedLeaveType;
+                            return ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  selectedLeaveType = type['id']!;
+                                });
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: isSelected
+                                    ? Theme.of(context).primaryColor
+                                    : Colors.white,
+                                foregroundColor:
+                                    isSelected ? Colors.white : Colors.black,
+                              ),
+                              child: Text(
+                                type['label']!,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            );
+                          }).toList(),
+                        ),
+                        const SizedBox(height: 24),
+
+                        // Number of Days
+                        const Text(
+                          'عدد الايام',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(leaveTypes[1]['days'].toString()),
+                        ),
+                        const SizedBox(height: 24),
+
+                        // Date Range
+                        const Text(
+                          'تاريخ من',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        TextFormField(
+                          initialValue: '2025-01-01',
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            suffixIcon: const Icon(Icons.calendar_today),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+
+                        const Text(
+                          'تاريخ الى',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        TextFormField(
+                          initialValue: '2025-02-01',
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            suffixIcon: const Icon(Icons.calendar_today),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+
+                        // Details
+                        const Text(
+                          'تفاصيل الطلب',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        TextFormField(
+                          maxLines: 4,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+
+                        // Attachments
+                        const Text(
+                          'المرفقات',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.upload_file),
+                              SizedBox(width: 8),
+                              Text('........'),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+
+                        // Submit Button
+                        SizedBox(
+                          width: double.infinity,
+                          height: 48,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
+                              foregroundColor: Colors.white,
+                            ),
+                            child: const Text('إرسال'),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+=======
               verticalSpace(10),
               Container(
                 height: 100.h,
@@ -250,6 +487,7 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                       ),
                     )
                   ],
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                 ),
               ),
 

@@ -11,7 +11,10 @@ import '../../features/home/ui/screens/salaries.dart';
 import '../../features/login/cubit/login_cubit.dart';
 import '../../features/login/ui/forget_password.dart';
 import '../../features/login/ui/login_screen.dart';
+<<<<<<< HEAD
+=======
 import '../../features/notifications/ui/notification.dart';
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
 import '../../features/settings/change_password.dart';
 import '../../features/settings/setting_screen.dart';
 import '../../features/settings/user_info.dart';
@@ -90,6 +93,8 @@ class AppRouter {
           builder: (_) => LeaveRequestForm(),
         );
 
+<<<<<<< HEAD
+=======
       case Routes.regulations:
         return MaterialPageRoute(
           builder: (_) => RegulationsScreen(),
@@ -108,6 +113,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => NotificationsScreen(),
         );
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
       default:
         return MaterialPageRoute(builder: (_) {
           return Scaffold(

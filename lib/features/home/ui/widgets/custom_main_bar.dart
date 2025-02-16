@@ -66,11 +66,19 @@ PreferredSizeWidget customMainAppBar({required BuildContext context}) {
                       ),
                       horizontalSpace(10),
                       AppWidgetButton(
+<<<<<<< HEAD
+                        widget: chickImageNetwork(url: 'url'),
+                        onPressed: () {
+                          context.pushNamed(Routes.settingScreen);
+                        },
+                        borderRadius: 100,
+=======
                         widget: chickImageNetwork(url: ''),
                         onPressed: () {
                           context.pushNamed(Routes.settingScreen);
                         },
                         borderRadius: 360,
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                         backgroundColor: ColorsManager.raWhite,
                         buttonWidth: 40.w,
                         buttonHeight: 50.h,

@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zimam_app_hr/core/helpers/extensions.dart';
 
-import '../../core/helpers/app_regex.dart';
 import '../../core/helpers/spacing.dart';
 import '../../core/routing/routes.dart';
 import '../../core/theme/colors.dart';
 import '../../core/theme/styles.dart';
 import '../../core/widgets/app_text_form_field.dart';
-import '../../core/widgets/custom_image_network.dart';
 
 class ChangePasswordPage extends StatefulWidget {
   const ChangePasswordPage({super.key});

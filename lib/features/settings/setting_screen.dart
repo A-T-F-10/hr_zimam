@@ -78,7 +78,11 @@ class _SettingScreenState extends State<SettingScreen> {
                     ],
                   ),
                   Container(
+<<<<<<< HEAD
+                    child: chickImageNetwork(url: 'testing.com'),
+=======
                     child: chickImageNetwork(url: ''),
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
                     height: 100.h,
                     width: 100.w,
                     decoration: BoxDecoration(
@@ -170,7 +174,11 @@ class _SettingScreenState extends State<SettingScreen> {
                 },
               ),
               onTap: () {
+<<<<<<< HEAD
+                // Handle change language
+=======
                 context.pushNamed(Routes.notification);
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
               },
             ),
           ],

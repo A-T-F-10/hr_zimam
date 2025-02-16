@@ -13,10 +13,15 @@ class Routes {
   static const String changePassword = '/change_password';
   static const String salaryScreen = '/salaries';
   static const String leaveRequestFormScreen = '/leave_request';
+<<<<<<< HEAD
+
+  // LeaveRequestForm
+=======
   static const String regulations = '/regulations';
   static const String requestsPage = '/requests_page';
   static const String requestsDerails = '/request_details';
   static const String notification = '/notification';
 
   // RequestDetails
+>>>>>>> 67aaba6c96c0e3a12c9bdfea529df2288ac375e4
 }
