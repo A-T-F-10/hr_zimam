@@ -72,7 +72,7 @@ PreferredSizeWidget customMainAppBar({required BuildContext context}) {
                         },
                         borderRadius: 360,
                         backgroundColor: ColorsManager.raWhite,
-                        buttonWidth: 40.w,
+                        buttonWidth: 45.w,
                         buttonHeight: 50.h,
                       ),
                       horizontalSpace(10),

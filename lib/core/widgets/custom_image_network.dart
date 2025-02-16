@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 chickImageNetwork({
   required String url,
   double? width,
 }) {
   return url.isEmpty
-      ? Image.asset('assets/images/arabsstock.png')
+      ? Image.asset(
+          'assets/images/arabsstock.png',
+        )
       : Image.network(
           url,
           filterQuality: FilterQuality.high,
@@ -23,13 +26,17 @@ chickImageNetwork({
               return child;
             } else {
               // Show a loading indicator while the image is being loaded
-              return Image.asset('assets/images/arabsstock.png');
+              return Image.asset(
+                'assets/images/arabsstock.png',
+              );
             }
           },
           errorBuilder:
               (BuildContext context, Object exception, StackTrace? stackTrace) {
             // Handle the error when the image fails to load
-            return Image.asset('assets/images/arabsstock.png');
+            return Image.asset(
+              'assets/images/arabsstock.png',
+            );
           },
         );
 }
