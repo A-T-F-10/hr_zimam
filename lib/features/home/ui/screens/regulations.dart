@@ -89,6 +89,8 @@ class RegulationsScreen extends StatelessWidget {
         ],
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
             value,
@@ -110,62 +112,62 @@ class RegulationsScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _buildMonthHeader(String month) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16.0),
-      child: Text(
-        month,
-        style: const TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-        ),
-        textAlign: TextAlign.right,
-      ),
-    );
-  }
-
-  Widget _buildAttendanceDay(
-      String day, String month, String time, bool checkIn, bool checkOut,
-      {bool isHighlighted = false}) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-        // border: Border.all(color: Colors.grey[200]!),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            height: 50.h,
-            width: 50.w,
-            decoration: BoxDecoration(
-              color: ColorsManager.lighterGray,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Column(
-              children: [
-                Text(
-                  day,
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+Widget _buildAttendanceDay(
+    String day, String month, String time, bool checkIn, bool checkOut,
+    {bool isHighlighted = false}) {
+  return Container(
+    margin: const EdgeInsets.only(bottom: 8),
+    padding: const EdgeInsets.all(16),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10),
+      // border: Border.all(color: Colors.grey[200]!),
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          height: 60.h,
+          width: 50.w,
+          decoration: BoxDecoration(
+            color: ColorsManager.lighterGray,
+            borderRadius: BorderRadius.circular(5),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                day,
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.bold,
                 ),
-                Text(month),
+              ),
+              Text(month),
+            ],
+          ),
+        ),
+        horizontalSpace(15),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                const Text(' تم الحضور', style: TextStyle(color: Colors.green)),
+                horizontalSpace(10),
+                const Text(' الساعة'),
+                horizontalSpace(5),
+                Text(time),
               ],
             ),
-          ),
-          horizontalSpace(15),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            verticalSpace(10),
+            if (checkOut)
               Row(
                 children: [
-                  const Text(' تم الحضور',
+                  const Text('تم الإنصراف',
                       style: TextStyle(color: Colors.green)),
                   horizontalSpace(10),
                   const Text(' الساعة'),
@@ -173,62 +175,49 @@ class RegulationsScreen extends StatelessWidget {
                   Text(time),
                 ],
               ),
-              verticalSpace(10),
-              if (checkOut)
-                Row(
-                  children: [
-                    const Text('تم الإنصراف',
-                        style: TextStyle(color: Colors.green)),
-                    horizontalSpace(10),
-                    const Text(' الساعة'),
-                    horizontalSpace(5),
-                    Text(time),
-                  ],
-                ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+          ],
+        ),
+      ],
+    ),
+  );
+}
 
-  Widget _buildAbsentDay(String day, String month) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.red[50],
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.grey[200]!),
-      ),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-            decoration: BoxDecoration(
-              color: Colors.grey[800],
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Text(
-              'غائب',
-              style: TextStyle(color: Colors.white),
-            ),
+Widget _buildAbsentDay(String day, String month) {
+  return Container(
+    margin: const EdgeInsets.only(bottom: 8),
+    padding: const EdgeInsets.all(16),
+    decoration: BoxDecoration(
+      color: Colors.red[50],
+      borderRadius: BorderRadius.circular(8),
+      border: Border.all(color: Colors.grey[200]!),
+    ),
+    child: Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+          decoration: BoxDecoration(
+            color: Colors.grey[800],
+            borderRadius: BorderRadius.circular(8),
           ),
-          const Spacer(),
-          Column(
-            children: [
-              Text(
-                day,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+          child: const Text(
+            'غائب',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
+        const Spacer(),
+        Column(
+          children: [
+            Text(
+              day,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
               ),
-              Text(month),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
+            ),
+            Text(month),
+          ],
+        ),
+      ],
+    ),
+  );
 }
