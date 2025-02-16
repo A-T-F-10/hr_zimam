@@ -82,6 +82,7 @@ class ProfileScreen extends StatelessWidget {
 
   // Menu Item Widget
   Widget buildMenuItem(
+      // ignore: non_constant_identifier_names
       {required String SVG_icon,
       bool isLogout = false,
       required String title,
@@ -134,6 +135,8 @@ class ProfileScreen extends StatelessWidget {
 }
 
 class MyDrawerHeader extends StatelessWidget {
+  const MyDrawerHeader({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DrawerHeader(
@@ -161,7 +164,7 @@ class MyDrawerHeader extends StatelessWidget {
                 Container(
                   height: 60.h,
                   width: 60.w,
-                  child: chickImageNetwork(url: 'url'),
+                  child: chickImageNetwork(url: ''),
                   decoration: BoxDecoration(
                     color: ColorsManager.raBrown2,
                     borderRadius: BorderRadius.circular(5),

@@ -7,6 +7,7 @@ import 'package:zimam_app_hr/core/theme/colors.dart';
 import 'package:zimam_app_hr/features/home/ui/screens/salaries.dart';
 
 import '../../../../core/theme/styles.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 
 class LeaveRequestForm extends StatefulWidget {
   const LeaveRequestForm({super.key});
@@ -17,8 +18,8 @@ class LeaveRequestForm extends StatefulWidget {
 
 class _LeaveRequestFormState extends State<LeaveRequestForm> {
   String selectedLeaveType = 'occasion';
-  final startDate = DateTime(2025, 1, 1);
-  final endDate = DateTime(2025, 2, 1);
+  final startDate = DateTime.now();
+  final endDate = DateTime.now();
 
   final leaveTypes = [
     {'id': 'sick', 'label': 'مرضية', 'days': '10 ايام'},
@@ -36,31 +37,9 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: ColorsManager.raWhite,
-        appBar: AppBar(
-          toolbarHeight: 70.h,
-          leading: Container(
-            alignment: Alignment.topCenter,
-            height: 10.h,
-            margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 15.h),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: IconButton(
-              alignment: Alignment.topCenter,
-              icon: Icon(Icons.arrow_back),
-              onPressed: () {
-                context.pop();
-              },
-              color: Colors.black,
-            ),
-          ),
-          backgroundColor: Colors.black,
-          title: Text(
-            'طلب إجازة',
-            style: TextStyles.font16WhiteSemiBold,
-          ),
-          centerTitle: true,
+        appBar: customAppBar(
+          context: context,
+          title: 'طلب إجازة',
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -206,7 +185,10 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                                 fontSize: 16, color: ColorsManager.raBlack),
                           ),
                           Spacer(),
-                          Icon(Icons.calendar_today),
+                          Icon(
+                            Icons.calendar_today,
+                            size: 15.h,
+                          ),
                           horizontalSpace(10),
                         ],
                       ),
@@ -237,25 +219,34 @@ class _LeaveRequestFormState extends State<LeaveRequestForm> {
                       ),
                     ),
                     CustomDivider(),
-                    Container(
-                      width: double.infinity,
-                      height: 35.h,
-                      decoration: BoxDecoration(
-                          color: ColorsManager.raWhite,
-                          border: Border.all(color: ColorsManager.raDarkGray5),
-                          borderRadius: BorderRadius.circular(5)),
-                      child: Row(
-                        children: [
-                          horizontalSpace(10),
-                          Text(
-                            '2025-01-01',
-                            style: TextStyle(
-                                fontSize: 16, color: ColorsManager.raBlack),
-                          ),
-                          Spacer(),
-                          Icon(Icons.calendar_today),
-                          horizontalSpace(10),
-                        ],
+                    GestureDetector(
+                      onTap: () {
+                        print('object');
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        height: 35.h,
+                        decoration: BoxDecoration(
+                            color: ColorsManager.raWhite,
+                            border:
+                                Border.all(color: ColorsManager.raDarkGray5),
+                            borderRadius: BorderRadius.circular(5)),
+                        child: Row(
+                          children: [
+                            horizontalSpace(10),
+                            Text(
+                              '2025-01-01',
+                              style: TextStyle(
+                                  fontSize: 16, color: ColorsManager.raBlack),
+                            ),
+                            Spacer(),
+                            Icon(
+                              Icons.calendar_today,
+                              size: 15.h,
+                            ),
+                            horizontalSpace(10),
+                          ],
+                        ),
                       ),
                     )
                   ],

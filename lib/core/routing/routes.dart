@@ -16,6 +16,7 @@ class Routes {
   static const String regulations = '/regulations';
   static const String requestsPage = '/requests_page';
   static const String requestsDerails = '/request_details';
+  static const String notification = '/notification';
 
   // RequestDetails
 }

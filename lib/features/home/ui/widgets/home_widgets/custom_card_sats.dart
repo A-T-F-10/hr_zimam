@@ -15,8 +15,8 @@ class CustomCardSats extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildStatItem('رصيد الإجازات', '15', TextStyles.font24RedBlod),
-          _buildStatItem('عدد الغياب', '2', TextStyles.font24GreenBlod),
+          _buildStatItem('رصيد الإجازات', '15', TextStyles.font24GreenBlod),
+          _buildStatItem('عدد الغياب', '2', TextStyles.font24RedBlod),
           _buildStatItem('الطلبات', '4', TextStyles.font24BlueBold),
         ],
       ),
@@ -27,7 +27,7 @@ class CustomCardSats extends StatelessWidget {
 Widget _buildStatItem(String label, String value, textStyles) {
   return Container(
       width: 100.w,
-      height: 70.h,
+      height: 85.h,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: ColorsManager.raWhite,
@@ -35,6 +35,7 @@ Widget _buildStatItem(String label, String value, textStyles) {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             value,
